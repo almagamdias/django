@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}All courses{% endblock %}
+{% block content %}
+<div class="card mt-5">
+    <div class="card-body">
+        <h1 class="card-title">{{ course.title }}</h1>
+        <h2>{{ course.category }}</h2>
+        <p class="card-text">Price: {{ course.price }}</p>
+        <p class="card-text">Quantity: {{ course.student_qty }}</p>
+        <a href="" class="btn btn-primary">Buy</a>
+        {% if course.price > 70 %}
+        <span class="bg-danger text-light p-1 m-3">It is TOOOOO expensive!!!</span>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
